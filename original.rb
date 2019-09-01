@@ -1,5 +1,5 @@
 
-
+require 'pry'
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -66,9 +66,16 @@ class Song
 
   end
 
-  def self.destroy_all
+  def self.destory_all
      self.all.clear
   end
 
 end
 
+Song.create_by_name("Lalala")
+Song.create_by_name("TaTaTa")
+Song.create_by_name("AaAaAa")
+p Song.new_from_filename("Taylor Swift - Blank Space.mp3")
+
+binding.pry
+"test"
